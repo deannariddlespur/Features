@@ -10,10 +10,10 @@ class FeaturesController extends \BaseController {
 return View::make('features.index', ['features' => $features]);
 
 	 }
-	 public function show($featurename)
+	 public function show($name)
 	 {
 	 
-	   $feature = Feature::whereFeaturename($featurename)->first();
+	   $feature = Feature::whereName($name)->first();
    return View::make('features.show', ['feature' => $feature]);
    }
    

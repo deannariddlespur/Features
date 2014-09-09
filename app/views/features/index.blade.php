@@ -15,7 +15,7 @@
 	@if ($features->count())
 	
 	@foreach ($features as $feature)
-	    	<li>{{ link_to("/features/{$feature->featurename}", $feature->featurename) }}</li>
+	    	<li>{{ link_to("/features/{$feature->name}", $feature->name) }}</li>
 	    
 	    @endforeach
 	
