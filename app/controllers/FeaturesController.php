@@ -13,7 +13,7 @@ return View::make('features.index', ['features' => $features]);
 	 public function show($featurename)
 	 {
 	 
-	   $feature = Feature::whereName($name)->first();
+	   $feature = Feature::whereFeaturename($featurename)->first();
    return View::make('features.show', ['feature' => $feature]);
    }
    
