@@ -23,7 +23,12 @@ return View::make('features.index', ['features' => $features]);
    }
    public function store()
    { 
-   return 'create the new feature, given the post data';
+      $feature = new Feature;
+      $feature->name = Input::get('name');
+      $feature->save();
+   
+   return Redirect::to('/features');
+   return Redirect::route('features.index');
    }
    
  }
