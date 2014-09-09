@@ -4,7 +4,7 @@ class FeaturesController extends \BaseController {
 
 	public function index()
 	 {
-	   $features = feature::all();
+	   $features = Feature::all();
   
  
 return View::make('features.index', ['features' => $features]);
@@ -13,7 +13,7 @@ return View::make('features.index', ['features' => $features]);
 	 public function show($featurename)
 	 {
 	 
-	   $feature = feature::wherefeaturename($featurename)->first();
+	   $feature = Feature::whereName($name)->first();
    return View::make('features.show', ['feature' => $feature]);
    }
    
